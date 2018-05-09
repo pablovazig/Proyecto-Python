@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" tags="">
+	<title>Maxikiosko Online - {% block title %} {% endblock %}</title>
+	<link rel='stylesheet'  href='{% static "CSS/estilo.css" %}'>
+</head>
+<body>
+{% autoescape off %}
+<nav>
+	<ul id="cabecera">
+		<li><a href="{% 'inicio' %}"></a></li>
+
+		<li><a href="{% url 'novedades' %}">Novedades</a></li>
+
+		<li><a href="{% url 'productos' %}">Productos</a></li>		
+
+		<li><a href="{% url 'ingresar' %}">Ingresar</a></li>
+
+		<li><a href="{% url 'comentario' %}">Comentario</a></li>
+
+		<<li><a href="{% url 'contacto' %}">Comentario</a></li>
+	</ul>
+</nav>
+<section>
+{% block content %}
+		
+
+
+	
+{% endblock %}
+
+	
+</section>
+<footer>
+	<p>Proyecto de clase &copy;2017</p>
+</footer>
+{% endautoescape %}
+</body>
+</html>
